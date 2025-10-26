@@ -1,204 +1,491 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- UNICONS -->
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-  <!-- Add favicon -->
-  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-
-  <title>Iang</title>
-</head>
-
-<body>
-  <div class="container">
-    <!-- --------------- HEADER --------------- -->
-    <nav id="header">
-      <div class="nav-logo">
-        <p class="nav-name">Iang</p>
-        <span>.</span>
-      </div>
-      <div class="nav-menu" id="myNavMenu">
-        <ul class="nav_menu_list">
-          <li class="nav_list">
-            <a href="#home" class="nav-link active-link">Home</a>
-            <div class="circle"></div>
-          </li>
-          <li class="nav_list">
-            <a href="#about" class="nav-link">About</a>
-            <div class="circle"></div>
-          </li>
-          <li class="nav_list">
-            <a href="#projects" class="nav-link">Skill</a>
-            <div class="circle"></div>
-          </li>
-          <li class="nav_list">
-            <a href="#contact" class="nav-link">Contact</a>
-            <div class="circle"></div>
-          </li>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Saya</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <a href="#" class="logo">Portofolio</a>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#skills">Keahlian</a></li>
+          <li><a href="#projects">Proyek</a></li>
+          <li><a href="#contact">Kontak</a></li>
         </ul>
-      </div>
-      <div class="nav-menu-btn">
-        <i class="uil uil-bars" onclick="myMenuFunction()"></i>
-      </div>
-    </nav>
+      </nav>
+    </header>
 
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-container">
+            <div class="hero-content">
+              <h1>Halo, Saya Iang</h1>
+              <p class="hero-subtitle">Web Developer</p>
+              <p>
+                Saya menciptakan pengalaman digital yang indah dan fungsional.
+                Dengan passion dalam coding dan design, saya membantu mewujudkan ide
+                Anda menjadi kenyataan.
+              </p>
+              <div class="cta-buttons">
+                <a href="#contact" class="cta-button">Hubungi Saya</a>
+                <a href="#projects" class="cta-button cta-button-secondary"
+                  >Lihat Proyek</a
+                >
+              </div>
+            </div>
+            <div class="hero-image">
+              <div class="floating-elements">
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="code-icon">{ }</div>
+                <div class="code-icon">&lt;/&gt;</div>
+                <div class="code-icon">💻</div>
+              </div>
+              <div class="hero-image-main">
+                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Background glow -->
+                  <defs>
+                    <linearGradient
+                      id="glowGradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
+                      <stop
+                        offset="0%"
+                        style="
+                          stop-color: rgba(255, 255, 255, 0.3);
+                          stop-opacity: 1;
+                        "
+                      />
+                      <stop
+                        offset="100%"
+                        style="
+                          stop-color: rgba(255, 255, 255, 0.1);
+                          stop-opacity: 1;
+                        "
+                      />
+                    </linearGradient>
+                    <filter id="glow">
+                      <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+                      <feMerge>
+                        <feMergeNode in="coloredBlur" />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
+                  </defs>
 
-    <!-- -------------- MAIN ---------------- -->
-    <main class="wrapper">
-      <!-- -------------- FEATURED BOX ---------------- -->
-      <section class="featured-box" id="home">
-        <div class="featured-text">
-          <div class="featured-text-card">
-            <span>Iang</span>
-          </div>
-          <div class="featured-name">
-            <p>Saya <span class="typedText"></span></p>
-          </div>
-          <div class="featured-text-info">
-            <p>Experienced frontend developer with a passion for creating visually stunning
-              and user-friendly websites.
-            </p>
-          </div>
-          <div class="featured-text-btn">
-            <button class="btn blue-btn" ><a href="#about" style="text-decoration: none; color: white;">About me</a></button>
-          </div>
-        </div>
-        <div class="featured-image">
-          <div class="image">
-            <img src="IMG_6707.JPG" alt="avatar">
-          </div>
-        </div>
+                  <!-- Desk -->
+                  <rect
+                    x="50"
+                    y="320"
+                    width="400"
+                    height="15"
+                    rx="5"
+                    fill="rgba(255,255,255,0.3)"
+                  />
+                  <rect
+                    x="30"
+                    y="335"
+                    width="440"
+                    height="25"
+                    rx="8"
+                    fill="rgba(255,255,255,0.4)"
+                  />
 
-      </section>
-      <!-- -------------- ABOUT BOX ---------------- -->
+                  <!-- Chair -->
+                  <ellipse
+                    cx="250"
+                    cy="340"
+                    rx="45"
+                    ry="15"
+                    fill="rgba(255,255,255,0.25)"
+                  />
+                  <rect
+                    x="230"
+                    y="300"
+                    width="40"
+                    height="40"
+                    rx="8"
+                    fill="rgba(255,255,255,0.3)"
+                  />
+                  <rect
+                    x="240"
+                    y="270"
+                    width="20"
+                    height="35"
+                    rx="5"
+                    fill="rgba(255,255,255,0.25)"
+                  />
 
-      <section class="section" id="about">
-        <div class="top-header">
-            <h1>About Me</h1>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="about-info">
-                    <h3>My introduction</h3>
-                    <p>I am well-versed in HTML, CSS and JavaScript , and other cutting edge
-                        frameworks and libraries,which allows me to implement interactive features.
-                        Additionally, I have experirence working with content management systems (CMS) like
-                        WordPress.
-                    </p>
-                </div>
+                  <!-- Person body -->
+                  <ellipse
+                    cx="250"
+                    cy="290"
+                    rx="35"
+                    ry="45"
+                    fill="rgba(255,255,255,0.4)"
+                  />
+
+                  <!-- Person head -->
+                  <circle cx="250" cy="230" r="30" fill="rgba(255,255,255,0.5)" />
+
+                  <!-- Hair -->
+                  <path
+                    d="M 220 220 Q 220 200 250 195 Q 280 200 280 220 Q 280 230 270 235 Q 265 220 250 220 Q 235 220 230 235 Q 220 230 220 220"
+                    fill="rgba(255,255,255,0.6)"
+                  />
+
+                  <!-- Arms -->
+                  <ellipse
+                    cx="215"
+                    cy="280"
+                    rx="12"
+                    ry="35"
+                    fill="rgba(255,255,255,0.45)"
+                    transform="rotate(-20 215 280)"
+                  />
+                  <ellipse
+                    cx="285"
+                    cy="280"
+                    rx="12"
+                    ry="35"
+                    fill="rgba(255,255,255,0.45)"
+                    transform="rotate(20 285 280)"
+                  />
+
+                  <!-- Hands on keyboard -->
+                  <ellipse
+                    cx="200"
+                    cy="310"
+                    rx="10"
+                    ry="8"
+                    fill="rgba(255,255,255,0.5)"
+                  />
+                  <ellipse
+                    cx="300"
+                    cy="310"
+                    rx="10"
+                    ry="8"
+                    fill="rgba(255,255,255,0.5)"
+                  />
+
+                  <!-- Laptop -->
+                  <rect
+                    x="170"
+                    y="300"
+                    width="160"
+                    height="10"
+                    rx="3"
+                    fill="rgba(255,255,255,0.5)"
+                  />
+
+                  <!-- Laptop screen -->
+                  <rect
+                    x="180"
+                    y="180"
+                    width="140"
+                    height="120"
+                    rx="5"
+                    fill="rgba(255,255,255,0.4)"
+                    filter="url(#glow)"
+                  />
+                  <rect
+                    x="190"
+                    y="190"
+                    width="120"
+                    height="100"
+                    rx="3"
+                    fill="rgba(33, 33, 33, 0.6)"
+                  />
+
+                  <!-- Code lines on screen -->
+                  <line
+                    x1="200"
+                    y1="210"
+                    x2="260"
+                    y2="210"
+                    stroke="#E67514"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                  <line
+                    x1="210"
+                    y1="225"
+                    x2="280"
+                    y2="225"
+                    stroke="#E67514"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                  <line
+                    x1="210"
+                    y1="240"
+                    x2="270"
+                    y2="240"
+                    stroke="#E67514"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                  <line
+                    x1="200"
+                    y1="255"
+                    x2="250"
+                    y2="255"
+                    stroke="#E67514"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                  <line
+                    x1="210"
+                    y1="270"
+                    x2="290"
+                    y2="270"
+                    stroke="#E67514"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+
+                  <!-- Coffee cup -->
+                  <ellipse
+                    cx="360"
+                    cy="310"
+                    rx="15"
+                    ry="5"
+                    fill="rgba(255,255,255,0.4)"
+                  />
+                  <path
+                    d="M 345 310 L 345 290 Q 345 285 350 285 L 370 285 Q 375 285 375 290 L 375 310"
+                    fill="rgba(255,255,255,0.45)"
+                  />
+                  <path
+                    d="M 375 295 Q 385 295 385 302 Q 385 309 375 309"
+                    fill="none"
+                    stroke="rgba(255,255,255,0.4)"
+                    stroke-width="3"
+                  />
+
+                  <!-- Steam from coffee -->
+                  <path
+                    d="M 352 280 Q 352 270 355 268"
+                    fill="none"
+                    stroke="rgba(255,255,255,0.3)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  >
+                    <animate
+                      attributeName="d"
+                      values="M 352 280 Q 352 270 355 268;M 352 280 Q 355 270 352 268;M 352 280 Q 352 270 355 268"
+                      dur="2s"
+                      repeatCount="indefinite"
+                    />
+                  </path>
+                  <path
+                    d="M 362 278 Q 362 268 365 266"
+                    fill="none"
+                    stroke="rgba(255,255,255,0.3)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  >
+                    <animate
+                      attributeName="d"
+                      values="M 362 278 Q 362 268 365 266;M 362 278 Q 365 268 362 266;M 362 278 Q 362 268 365 266"
+                      dur="2s"
+                      repeatCount="indefinite"
+                      begin="0.5s"
+                    />
+                  </path>
+
+                  <!-- Plant -->
+                  <ellipse
+                    cx="120"
+                    cy="315"
+                    rx="20"
+                    ry="8"
+                    fill="rgba(255,255,255,0.4)"
+                  />
+                  <path
+                    d="M 120 315 L 120 295 Q 120 290 125 290 L 125 315"
+                    fill="rgba(255,255,255,0.35)"
+                  />
+                  <circle cx="115" cy="285" r="8" fill="rgba(255,255,255,0.5)" />
+                  <circle cx="125" cy="280" r="8" fill="rgba(255,255,255,0.5)" />
+                  <circle cx="120" cy="288" r="7" fill="rgba(255,255,255,0.5)" />
+
+                  <!-- Floating code symbols -->
+                  <text
+                    x="100"
+                    y="150"
+                    fill="rgba(230, 117, 20, 0.5)"
+                    font-size="24"
+                    font-family="monospace"
+                  >
+                    &lt;/&gt;
+                  </text>
+                  <text
+                    x="350"
+                    y="120"
+                    fill="rgba(230, 117, 20, 0.5)"
+                    font-size="20"
+                    font-family="monospace"
+                  >
+                    { }
+                  </text>
+                  <text
+                    x="380"
+                    y="200"
+                    fill="rgba(230, 117, 20, 0.5)"
+                    font-size="22"
+                    font-family="monospace"
+                  >
+                    ( )
+                  </text>
+
+                  <!-- Animated cursor on screen -->
+                  <rect x="295" y="267" width="3" height="12" fill="#E67514">
+                    <animate
+                      attributeName="opacity"
+                      values="1;0;1"
+                      dur="1s"
+                      repeatCount="indefinite"
+                    />
+                  </rect>
+                </svg>
+              </div>
             </div>
         </div>
+      </div>
     </section>
-      <!-- -------------- PROJECT BOX ---------------- -->
 
-      <section class="section" id="projects">
-        <div class="top-header">
-          <h1>Projects</h1>
+    <!-- About Section -->
+    <section id="about">
+      <h2 class="section-title">Tentang Saya</h2>
+      <div class="about-content">
+        <div class="about-image">👤</div>
+        <div class="about-text">
+          <p>
+            Halo! Saya adalah mahasiswa semester 7 yang passionate dalam
+            menciptakan pengalaman digital yang menarik dan fungsional. Dengan
+            pengalaman sebagai developer di organisasi, saya telah membantu
+            organisasi saya menyelesaikan beberapa project.
+          </p>
+          <p>
+            Saya percaya bahwa desain yang baik bukan hanya tentang estetika,
+            tetapi juga tentang menciptakan pengalaman pengguna yang intuitif
+            dan bermakna. Setiap project adalah kesempatan untuk belajar dan
+            berkembang.
+          </p>
+          <p>Mari berkolaborasi untuk menciptakan sesuatu yang luar biasa!</p>
         </div>
-        <div class="project-container">
-          <div class="project-box">
-            <i class="uil uil-briefcase-alt"></i>
-            <h3>Completed</h3>
-            <label>15+ Finished Projects</label>
-          </div>
-          <div class="project-box">
-            <i class="uil uil-users-alt"></i>
-            <h3>Clients</h3>
-            <label>25+ Happy Clients</label>
-          </div>
-          <div class="project-box">
-            <i class="uil uil-award"></i>
-            <h3>Experience</h3>
-            <label>7+ Years in the field</label>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2 class="section-title">Keahlian</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">🎨</div>
+          <h3>Front-end</h3>
+          <p>HTML, CSS, JavaScript, React, Node.js</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">💻</div>
+          <h3>Back-end</h3>
+          <p>Php, Laravel</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📱</div>
+          <h3>Responsive Design</h3>
+          <p>Mobile-First, Bootstrap, Tailwind CSS</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">⚡</div>
+          <h3>Performance</h3>
+          <p>Optimasi Kecepatan, SEO, Best Practices</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2 class="section-title">Proyek Terbaru</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">🌐</div>
+          <div class="project-content">
+            <h3>PENA Commerce</h3>
+            <p>
+              Platform belanja online modern dengan fitur keranjang belanja,
+              checkout.
+            </p>
+            <a href="#" class="project-link">Lihat Detail →</a>
           </div>
         </div>
-      </section>
-
-      <!-- -------------- CONTACT BOX ---------------- -->
-
-      <section class="section" id="contact">
-        <div class="top-header">
-          <h1>Get in touch</h1>
-          <span>Do you have a project in your mind, contact me here</span>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="contact-info">
-              <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
-              <p><i class="uil uil-envelope"></i> Email: rian.killer07@gmail.com</p>
-              <p><i class="uil uil-phone"></i> +62 822 9602 9563</p>
-            </div>
-          </div>
-          <div class="col">
-            <div class="form-control">
-              <div class="form-inputs">
-                <input type="text" class="input-field" placeholder="Name">
-                <input type="text" class="input-field" placeholder="Email">
-              </div>
-              <div class="text-area">
-                <textarea placeholder="Message"></textarea>
-              </div>
-              <div class="form-button">
-                <button class="btn">Send <i class="uil uil-message"></i></button>
-              </div>
-            </div>
+        <div class="project-card">
+          <div class="project-image">📊</div>
+          <div class="project-content">
+            <h3>KUMDAG Profile</h3>
+            <p>
+              Web Profile untuk KUMDAG dengan visualisasi data dan interactive.
+            </p>
+            <a href="#" class="project-link">Lihat Detail →</a>
           </div>
         </div>
-      </section>
+        <div class="project-card">
+          <div class="project-image">🎯</div>
+          <div class="project-content">
+            <h3>PENA Profile</h3>
+            <p>
+              Landing page organisasi PENA untuk pendaftaran anggota baru dan
+              inventaris barang organisasi.
+            </p>
+            <a href="#" class="project-link">Lihat Detail →</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    </main>
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2 class="section-title">Hubungi Saya</h2>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="name">Nama</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Pesan</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Kirim Pesan</button>
+      </form>
+    </section>
 
-
-    <!-- --------------- FOOTER --------------- -->
+    <!-- Footer -->
     <footer>
-      <div class="top-footer">
-        <p>Iang .</p>
+      <div class="social-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skill</a>
+        <a href="#projects">Project</a>
+        <a href="#contact">Contack</a>
       </div>
-      <div class="middle-footer">
-        <ul class="footer-menu">
-          <li class="footer_menu_list">
-            <a href="#home">Home</a>
-          </li>
-          <li class="footer_menu_list">
-            <a href="#about">About</a>
-          </li>
-          <li class="footer_menu_list">
-            <a href="#projects">Skill</a>
-          </li>
-          <li class="footer_menu_list">
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer-social-icons">
-        <div class="icon"><a href="https://instagram.com/Ianmolionta"><i class="uil uil-instagram"></i></a></div>
-        <div class="icon"><a href="https://twitter.com/RMolionta"><i class="uil uil-twitter"></i></a></div>
-      </div>
-      <div class="bottom-footer">
-        <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Iang</a> - All rights reserved
-        </p>
-      </div>
+      <p>&copy; 2025 Portofolio Saya. All rights reserved.</p>
     </footer>
-
-  </div>
-
-
-
-
-  <!-- ----- TYPING JS Link ----- -->
-  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
-  <!-- ----- SCROLL REVEAL JS Link----- -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-
-  <!-- ----- MAIN JS ----- -->
-  <script src="main.js"></script>
-</body>
-
+    <script src="main.js"></script>
+  </body>
 </html>
